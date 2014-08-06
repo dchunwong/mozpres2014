@@ -238,28 +238,48 @@
                     </script>
                     </section>
                 </section>
-                <section data-markdown data-notes="Note:">
-                ##[≡]〆(・∀・＠)
-                #Q&A
-                # \#interns
-                Note:
-                ##Dashboard
+                <section>
+                    <section data-markdown data-notes="Note:">
+                    ##[≡]〆(・∀・＠)
+                    #Q&A
+                    # \#interns
+                    Note:
+                    ##Dashboard
 
-                - Currently caches dictionaries used for visualization and shelves file
-                - Will implement database
-                - Would redo with angular rather than jquery, but libraries.
-                - Want to add devices to data too, but more scraping
-                - Quick lookup test health.
+                    - Currently caches dictionaries used for visualization and shelves file
+                    - Will implement database
+                    - Would redo with angular rather than jquery, but libraries.
+                    - Want to add devices to data too, but more scraping
+                    - Quick lookup test health.
 
-                ##Lab
+                    ##Lab
 
-                - Made a script to standardize setup
-                - Puppet and other options are being looked into.
-                - Network install took too long to setup with deadline
+                    - Made a script to standardize setup
+                    - Puppet and other options are being looked into.
+                    - Network install took too long to setup with deadline
 
-                ##Testing
+                    ##Testing
 
-                - Handled some issues, but mostly Jenkins and bugzilla
+                    - Handled some issues, but mostly Jenkins and bugzilla
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    #  I know that you draw from HTML Reports and other sources in Jenkins. Will there be plans to include what device a job was run on?
+
+                    Note: 
+                    Yes, I want to add the ability to see what device a job ran on to determine device issues.
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    # Will you include device health itself also? e.g. see how a particular device is doing across tests.
+
+                    Note:
+                    Yes, that is anotter good point for adding different views not available in Jenkins.
+                    </section>s
+                    <section data-markdown data-notes="Note:">
+                    # Will the ammeters be as precise as the current perf tests that report to TBPL?
+
+                    Note:
+                    I don't have enough information to answer that question.
+                    </section>
                 </section>
                 <section data-markdown data-notes="Note:">
                 ## ＼（＠￣∇￣＠）／
@@ -283,7 +303,7 @@
                 center: true,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
                 // Parallax scrolling
                 // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
