@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>reveal.js - The HTML Presentation Framework</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/solarized.css" id="solarized">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+            li{
+                list-style: none;
+            }
+            img{
+                height: 600px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    ## ヾ(@^▽^@)ノ
+                    #Summer of WebQA
+                    ## Testing, Dashboards, and Labs. Oh My!
+                    Note:
+                    Hi my name's Dylan and I:
+
+                    - am a WebQA intern this Summer
+                    - am presenting Summer of WebQA: Testing, Dashboards and Labs. Oh My!
+                    - will tell you about my experiences as an intern working at mozilla
+                    </script>
+                </section>
+                <section>
+                <h1> Test Test... </h1>
+                </section>
+                <section>
+                <h1> Mic Test... </h1>
+                </section>
+                </section>
+                <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    ##What Did I do?  (・ヘ・)?
+                    - Fix failing tests and add new ones to for Mozilla's websites and B2G. <!-- .element: class="fragment" data-fragment-index="1" -->
+                    - Buildout the on-device testing QA Lab in MV. <!-- .element: class="fragment" data-fragment-index="2" -->
+                    - Make a quick dashboard for Jenkins B2G tests. <!-- .element: class="fragment" data-fragment-index="3" -->
+                    - Talked to bots. <!-- .element: class="fragment" data-fragment-index="4" -->
+
+                    Note:
+                    I touched a lot of things this summer. I worked on:
+
+                    - Improving and adding tests to Mozilla websites (Sumo, Amo, mcom, mozillians)
+                    - Doing the same for Boot 2 Gecko (Firefox OS, troubleshooting on-device issues)
+                    - Making a dashboard to track test health on Jenkins B2G tests. (Continuous Integration)
+                    - Talked to bots
+
+                    I worked on more than just testing websites like I expected. 
+                    </script>
+                </section>
+
+                <section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template" >
+                    ## (⌐■_■)
+                    # Improving Mozilla's website tests
+                    Note:
+                    Improving tests means:
+
+                    - Fixing tests when they break (locator change to timing issues)
+                    - Investigating Failures
+                    - Adding more tests to cover new pages
+                    </script>
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    ## (=^･w･^)
+                    #Let's fix *All*
+                    #the failing tests!
+                    ### I don't know how to fix this ._. <!-- .element: class="fragment" data-fragment-index="1" -->
+                    Note:
+                    I was pretty excited and nervous to start but ran into some roadblocks.
+                    </script>
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    #Challenges
+                    - Not used to existing codebase <!-- .element: class="fragment" data-fragment-index="1" -->
+                    - Some things deeply abstracted away <!-- .element: class="fragment" data-fragment-index="2" -->
+                    - My own human error.<!-- .element: class="fragment" data-fragment-index="3" -->
+
+                    Note:
+
+                    - I had contributed a little before, but sometimes I ran into trouble where I wasn't sure what the test itself was doing. For example a compromise made at the time due to constraints I wasn't aware of.
+                    - Sometimes I needed to dig deeper into py.test, but some tools abstracted variables away and I had trouble figuring out scope or where things came from.
+                    - I made a lot of typos. And a lot of them slipped through and were pushed. Double checking is important! But it was also due to issues that I couldn't solve on my own due to my inexperience. Flashing devices etc.
+
+
+                    </script>
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    #(・ヘ・)
+                    #What'd I learn?
+
+                    Note: 
+                    I learned:
+
+                    - There aren't any stupid questions. Don't be afraid to ask on IRC. People just want to help! I inherently have anxiety online, and I was originally intimidated to ask questions that I thought might be too basic, but that's the whole point of the internship right?
+                    - Take a lot of opinions on the way. Getting reviews incrementally can let you do things right the first time.
+                    - One and Done. Get all the info you need so you can do a task and not need to revisit it.
+                    </section>
+                </section>
+                <section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    #B2G QA Lab Buildout
+                    <img src="labup.jpg" style="height: 500px"></img>
+
+                    Note:
+                    My other large project was building out the lab here in MV where:
+
+                    - on-device testing is conducted for Firefox OS
+                    - functional and performance tests are run
+                    - Automated and run by Jenkins
+                    - Phones are upside down, will explain later
+                    </script>
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    #I flashed phones.
+                    <img src="phone.jpg" style="height: 500px"></img>
+                    </script>
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    #*A LOT* of phones.
+                    <img src="phones.jpg" style="height: 500px"></img>
+
+                    Note:
+                    Devices needed to be flashed with lates base images from vendors but some issues:
+
+                    - Needed to be put into fastboot
+                    - Needed to wait for tests to finish
+                    - Newer scripts fixed this
+                    - adb issues
+                    </script>
+                    </section>
+                    <section>
+                    <img src="labold.jpg"></img>
+                    <aside class="notes" data-markdown>
+                    This is the old setup, still currently used for marketplace tests, but has since expanded. One device per mac.
+                    </aside>
+                    </section>
+                    <section>
+                    <img src="labbig.jpg"></img>
+                    <aside class="notes" data-markdown>
+                    - 26 flame devices, half and half, with 20 others on standby waiting to be setup.
+                    - upside down due to space constraints. Fixing it.
+                    - Tests actually failed
+                    - Two devices per mac mini.
+                    - Needed to juggle flashing ubuntu. Network boot.
+                    </aside>
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    <img src="ammeter.jpg"></img>
+                    ##Future
+
+                    Note:
+                    Future:
+
+                    - ammeters for power management
+                    - more than two devices per mac mini
+                    - an intermediate system to handle flashing of devices
+                    - reporting to treeherder (TBPL replacement)
+                    - JS tests.
+                    </script>
+                    </section>
+                </section>
+                <section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    ##(๑☆‿ ☆#)ᕗ
+                    #Tracking B2G Failures with a dashboard.
+
+                    Note: 
+                    My final project was worked on as a longterm project. A dashboard to track the health of Jenkins B2G Tests
+                    </script>
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    #Goal
+                    ##Easily view test health over time 
+
+                    Note:
+                    We want to easily see how tests are doing. If a test fails, is it intermittent? Or is it due to the update etc.
+
+                    Jenkins has this but cumbersome. (Demo?)
+                    </script>
+                    </section>
+                    <section data-markdown data-notes="Note:">
+                    <script type="text/template">
+                    ## (∩´﹏`∩)
+                    #DEMO
+                    ## W.I.P.
+                    </script>
+                    </section>
+                </section>
+                <section data-markdown data-notes="Note:">
+                ##[≡]〆(・∀・＠)
+                #Q&A
+                # \#interns
+                Note:
+                ##Dashboard
+
+                - Currently caches dictionaries used for visualization and shelves file
+                - Will implement database
+                - Would redo with angular rather than jquery, but libraries.
+                - Want to add devices to data too, but more scraping
+                - Quick lookup test health.
+
+                ##Lab
+
+                - Made a script to standardize setup
+                - Puppet and other options are being looked into.
+                - Network install took too long to setup with deadline
+
+                ##Testing
+
+                - Handled some issues, but mostly Jenkins and bugzilla
+                </section>
+                <section data-markdown data-notes="Note:">
+                ## ＼（＠￣∇￣＠）／
+                #Thanks Mozilla!
+                </section>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
